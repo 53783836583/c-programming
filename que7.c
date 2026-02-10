@@ -1,14 +1,25 @@
+//
+// Created by adhit on 10-02-2026.
+//
 #include <stdio.h>
-int main(){
-    char a;
-    scanf("%c",&a);
-    if((a>='A'&& a<='Z') || (a>='a' && a<='z')){
-        printf("alphabet");
+int main() {
+    int accounttype;
+    int years;
+    scanf("%d%d",accounttype,&years);
+
+    switch (accounttype) {
+        case 1:
+            if (years>3) {
+                printf("%d",'amount'+7000);
+            }
+            else {
+                printf("%d",years);
+            }
+        case 2:
+            if (years<=3) {
+                printf("%d",'amount'+5000);
+            }
     }
-    else if(a>='0' && a<='9'){
-        printf("Number");
-    }
-    else{
-        printf("special charater");
-    }
+return 0;
 }
+

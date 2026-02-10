@@ -1,11 +1,41 @@
 #include <stdio.h>
-int main(){
-    int a;
-    scanf("%d",&a);
-    if(a%5==0){
-        printf("number divisible by 5");
+//
+// Created by adhit on 10-02-2026.
+//...#include<stdio.h>
+int main() {
+    int accounttype,balance,withdrawamount;
+
+    scanf("%d",&accounttype);
+    scanf("%d",&balance);
+    scanf("%d",&withdrawamount);
+
+    switch (accounttype) {
+        case 1:
+            if (balance >= withdrawamount) {
+                printf("transaction success");
+            }
+            else {
+                printf("insufficient balance");
+            }
+            break;
+
+        case 2:
+            if (withdrawamount>5000) {
+                printf("limit exceeded");
+            } else if (balance >= withdrawamount) {
+                printf("transaction success");
+            } else {
+                printf("insufficient balance");
+            }
+            break;
+
+        default:
+            printf("invalid account type");
     }
-    else{
-        printf("number divisible by 5");
-    }
+    return 0;
 }
+
+
+
+
+
