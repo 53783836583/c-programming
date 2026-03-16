@@ -1,6 +1,4 @@
-//
-// Created by adhit on 14-02-2026.
-//
+
 #include <stdio.h>
 int main () {
     int n;
